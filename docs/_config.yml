@@ -1,1 +1,11 @@
+title: REDCap External Module Development Guide
+description: REDCap External Module Development Guide
+repository: ctsit/redcap_external_module_development_guide
+
+markdown: kramdown
+
+# ToDo: Review this theme content and remove stuff if it is not needed
 theme: jekyll-theme-minimal
+logo: /assets/img/logo.png
+show_downloads: true
+google_analytics:
