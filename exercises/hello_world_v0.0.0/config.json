@@ -8,13 +8,13 @@
     ],
     "authors": [
         {
-            "name": "Tiago Bember",
-            "email": "tbembersimeao@ufl.edu",
+            "name": "Kyle Chesney",
+            "email": "kyle.chesney@ufl.edu",
             "institution": "University of Florida - CTSI"
         },
         {
-            "name": "Kyle Chesney",
-            "email": "kyle.chesney@ufl.edu",
+            "name": "Tiago Bember",
+            "email": "tbembersimeao@ufl.edu",
             "institution": "University of Florida - CTSI"
         }
     ],
@@ -49,7 +49,7 @@
         {
             "name": "Select system",
             "key": "dummy_select_system",
-            "type": "dropdown",
+            "type": "radio",
             "choices": [
                 {
                     "value": "c",
@@ -66,14 +66,14 @@
       "project": [
          {
             "name": "Hello Project",
-            "icon": "",
+            "icon": "fas globe",
             "url": "pages/project_custom_page.php"
          }
       ],
       "control-center": [
          {
             "name": "Hello Admin",
-            "icon": "",
+            "icon": "fas fa-globe",
             "url": "pages/control_center_custom_page.php"
          }
       ]
