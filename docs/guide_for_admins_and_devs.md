@@ -24,7 +24,7 @@ This embedded configuration made code sharing harder. If you wanted the new vers
 
 Another configuration method was to store the configuration in a record in the redcap_log_event table. It's a little kludgy, but it works. Yet when an extension that uses log-event table method of configuration management fails, it's hard to debug and even harder to fix.
 
-Code that was only supposed to be applied to a few projects presented further challenges. The methods for managing a per-project deployment were in the hands of the develpper or system admin instead of the REDCap Admin.
+Code that was only supposed to be applied to a few projects presented further challenges. The methods for managing a per-project deployment were in the hands of the developer or system admin instead of the REDCap Admin.
 
 When hooks are working right, they work great, but a PHP error in a hook or plugin can be unforgiving. With PHP errors turned off, a production system displays nothing but an empty white screen if the code contains a PHP syntax error. A buggy plugin could be toxic to a REDCap system. Reverting the code of a buggy plugin or hook is as tedious as a deployment.
 
