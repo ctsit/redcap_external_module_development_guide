@@ -16,7 +16,7 @@ External Modules--referred to hereafter as simply _modules_--are neither the fir
 
 Hooks were introduced in May 2014 in REDCap 5.11.0 though that was just a rebranding of REDCap Extensions from REDCap 5.8.0, which, in turn, was a rebranding of Custom REDCap Functions from who knows when. Ignoring all that history, the role of a hook is to allow an existing REDCap page to be modified without changing REDCap core code. A hook is a named function which--if it exists--will be called during a page load. Typically, the hook function will be called at the beginning of the page construction or the very end. Hook functions can be pure PHP, just enough PHP to load some novel JavaScript, or a mixture of PHP and JavaScript.
 
-Both hooks and functions are (were?) powerful ways to modify REDCap. Some plugin and hook code was useful enough that it was shared within the REDCap community and posted to the community web site, Box.com, or in Github.
+Both hooks and functions are (were?) powerful ways to modify REDCap. Some plugin and hook code was useful enough that it was shared within the REDCap community and posted to the community web site, Box.com, or in GitHub.
 
 Yet in their original form, both hooks and plugins have issues. When they require configuration, it is generally difficult to manage. Some were written with configuration code embedded in the source code. To configure those, you had to have basic developer skills to change the lines of code that held the configuration details, then deploy the code. If the configuration details were wrong, talk to the developer again, get a fix, then redeploy the code.
 
