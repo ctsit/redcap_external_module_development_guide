@@ -1,6 +1,11 @@
+---
+layout: default
+title: External Module Development Exercises
+---
+
 # External Module Development Exercises
 
-The External Module Development Guide includes a set of [development exercises](./exercises/) to use as a guide for module development. Each exercise teaches a different facet of module development. The majority of the exercises are missing essential functionality with comments denoting the regions where the functionality should be added.
+The External Module Development Guide includes a set of [development exercises](https://github.com/ctsit/redcap_external_module_development_guide/exercises/) to use as a guide for module development. Each exercise teaches a different facet of module development. The majority of the exercises are missing essential functionality with comments denoting the regions where the functionality should be added.
 
 ## Preface
 
@@ -12,7 +17,7 @@ Read the section of the official documentation on [naming a module](https://gith
 
 ## Modules
 
-All of module development exercises reside in the Git repo that houses this document at [`https://github.com/ctsit/redcap_external_module_development_guide/exercises/`](https://github.com/ctsit/redcap_external_module_development_guide/exercises/)
+All of module development exercises reside in the Git repo that houses this document at [https://github.com/ctsit/redcap_external_module_development_guide/exercises/](https://github.com/ctsit/redcap_external_module_development_guide/exercises/)
 
 ### Hello World
 This is a "complete" module intended to be used to make sure your development pipeline is set up properly.
