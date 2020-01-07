@@ -1,0 +1,81 @@
+{
+    "name": "Hello world",
+    "description": "Hello world page to ensure your development tools are working",
+    "namespace": "HelloWorld\\ExternalModule",
+    "framework-version": 3,
+    "permissions": [
+        "redcap_every_page_top"
+    ],
+    "authors": [
+        {
+            "name": "Kyle Chesney",
+            "email": "kyle.chesney@ufl.edu",
+            "institution": "University of Florida - CTSI"
+        },
+        {
+            "name": "Tiago Bember",
+            "email": "tbembersimeao@ufl.edu",
+            "institution": "University of Florida - CTSI"
+        }
+    ],
+    "project-settings": [
+        {
+            "name": "Text entry",
+            "key": "text_entry",
+            "type": "text"
+        },
+        {
+            "name": "Select",
+            "key": "dummy_select",
+            "type": "dropdown",
+            "choices": [
+                {
+                    "value": "a",
+                    "name": "A"
+                },
+                {
+                    "value": "b",
+                    "name": "B"
+                }
+            ]
+        }
+    ],
+    "system-settings": [
+        {
+            "name": "Dummy config system",
+            "key": "dummy_cfg_system",
+            "type": "text"
+        },
+        {
+            "name": "Select system",
+            "key": "dummy_select_system",
+            "type": "radio",
+            "choices": [
+                {
+                    "value": "c",
+                    "name": "C"
+                },
+                {
+                    "value": "d",
+                    "name": "D"
+                }
+            ]
+        }
+    ],
+   "links": {
+      "project": [
+         {
+            "name": "Hello Project",
+            "icon": "fas globe",
+            "url": "pages/project_custom_page.php"
+         }
+      ],
+      "control-center": [
+         {
+            "name": "Hello Admin",
+            "icon": "fas fa-globe",
+            "url": "pages/control_center_custom_page.php"
+         }
+      ]
+   }
+}
