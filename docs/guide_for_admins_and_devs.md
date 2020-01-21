@@ -72,6 +72,6 @@ If you locate a module of interest to you, you can use the [GitHub.com](https://
 
 If you want to install a module that is in Github but not the REDCap Repo, access the repo's _releases_ in Github to download a zipped copy of the module. In many cases, the zip file is 100% of that you need to install the module. You can download it, extract it, rename the unzipped folder with a suffix like "\_v1.0.0" using the version number of the module, then copy that whole folder to the _./modules/_ folder of your REDCap server. At that point it is ready to be enable as if it had been downloaded from the REDCap Repo.
 
-If you want to follow the development of a module in GitHub, you can create a GitHub account and then _watch_ the module. A GitHub account will also allow you to create and comment on issues for any module.
+If you want to follow the development of a module in GitHub, you can create a GitHub account and then [_watch_](https://help.github.com/en/github/receiving-notifications-about-activity-on-github/watching-and-unwatching-repositories#watching-a-single-repository) the module. A GitHub account will also allow you to create and comment on issues for any module.
 
 One potential point of confusion when you view a module from GitHub is that each module visible in Github is in a _git repository_, a term often shortened to _git repo_ or just _repo_. This is not the same kind of repo as the REDCap Repo. They just happen to share the same name.
