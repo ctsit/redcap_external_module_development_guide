@@ -74,5 +74,4 @@ If you want to install a module that is in Github but not the REDCap Repo, acces
 
 If you want to follow the development of a module in GitHub, you can create a GitHub account and then _watch_ the module. A GitHub account will also allow you to create and comment on issues for any module.
 
-One potential point of confusion when you view a module from GitHub is that each module visible in Github is in _git repository_, a term often shortened to _git repo_ or just _repo_. This is not the same kind of repo as the REDCap Repo. They just happen to share the same name.
-
+One potential point of confusion when you view a module from GitHub is that each module visible in Github is in a _git repository_, a term often shortened to _git repo_ or just _repo_. This is not the same kind of repo as the REDCap Repo. They just happen to share the same name.
