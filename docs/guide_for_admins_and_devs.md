@@ -30,7 +30,7 @@ Another configuration method was to store the configuration in a record in the r
 
 Code that was only supposed to be applied to a few projects presented further challenges. The methods for managing a per-project deployment were in the hands of the developer or system admin instead of the REDCap Admin.
 
-When hooks worked right, they work great, but a PHP error in a hook or plugin can be unforgiving. With _PHP errors_ configuration option  turned off, a production system displays nothing but an empty white screen if the code contains a PHP syntax error. A buggy plugin could be toxic to a REDCap system. Reverting the code of a buggy plugin or hook was as tedious as the deployment.
+When hooks worked right, they worked great, but a PHP error in a hook or plugin could be unforgiving. With _PHP errors_ configuration option turned off, a production system displays nothing but an empty white screen if the code contains a PHP syntax error. A buggy plugin could be toxic to a REDCap system. Reverting the code of a buggy plugin or hook was as tedious as the deployment.
 
 Neither hooks nor plugins were well-labeled. There was no way for your REDCap system to tell you which extensions were deployed much less which _versions_ of those extensions were deployed. A particular bit of custom code might present its name or its version number clearly, but there was no convention where to present that information or system to present it.
 
