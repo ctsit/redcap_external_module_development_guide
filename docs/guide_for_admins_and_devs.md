@@ -62,7 +62,7 @@ The VUMC team's vetting process should never be considered a guarantee of qualit
 
 ## Where to find modules
 
-The REDCap Repo contains the most REDCap popular. The web interface for the repo is publicly accessible at [https://redcap.vanderbilt.edu/consortium/modules/index.php](https://redcap.vanderbilt.edu/consortium/modules/index.php). The repo's interface allows you to search the database of modules and sort the search results. It provides links to each module's git repo on GitHub.com which can provide details about the state and history of the module.
+The REDCap Repo contains most popular REDCap modules. The web interface for the repo is publicly accessible at [https://redcap.vanderbilt.edu/consortium/modules/index.php](https://redcap.vanderbilt.edu/consortium/modules/index.php). The repo's interface allows you to search the database of modules and sort the search results. It provides links to each module's git repo on GitHub.com which can provide details about the state and history of the module.
 
 The REDCap Repo is also accessible from the REDCap Control Center's _External Module_ page. While all the features of the public page are also accessible from the  Control Center link, the REDCap Repo will add links to download modules to the REDCap host when accessed via the Control Center.
 
