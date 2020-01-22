@@ -47,4 +47,28 @@ Read the section on [module requirements](https://github.com/vanderbilt/redcap-e
 
 ### Hello Hook
 
+This module serves as an introduction to hooks. You will learn how to utilise hook functions to run arbitrary code - in this case, a small bit of JavaScript that displays an alert. While you will not be _writing_ any JavaScript for this portion, you will see how to load in JavaScript files, and how to expose backend variables to the frontend.
+
 Read [the official documentation on calling hooks](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#how-to-call-redcap-hooks).
+
+<details>
+<summary>Example Solution
+</summary>
+
+`ExternalModule.php`
+```php
+    // FIXME
+    /* Write your code here */
+    function redcap_every_page_top($project_id) {
+    /* Stop writing code here */
+        $this->includeJs('js/hello_hook.js');
+```
+
+`config.json`
+```json
+    "permissions": [
+        "redcap_every_page_top"
+    ],
+```
+
+</details>
