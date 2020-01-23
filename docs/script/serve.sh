@@ -12,4 +12,10 @@
 #   rvm use 2.6.3
 #
 
-bundle exec jekyll serve --config _config.yml,_config_local.yaml
+LOCAL_CONFIG_YAML=_config_local.yaml
+
+if [ -e ${LOCAL_CONFIG_YAML} ]; then
+    bundle exec jekyll serve --config _config.yml,${LOCAL_CONFIG_YAML}
+else
+    bundle exec jekyll serve
+fi
