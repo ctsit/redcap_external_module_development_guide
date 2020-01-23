@@ -1,3 +1,3 @@
 $( document ).ready(function() {
-    alert(helloHook);
+    alert(helloHook.message);
 });

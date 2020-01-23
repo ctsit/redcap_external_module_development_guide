@@ -11,8 +11,11 @@ class ExternalModule extends AbstractExternalModule {
     /* Write your code here */
     function a_real_redcap_hook() {
     /* Stop writing code here */
+
+        // create an empty JS object for the module's variables
+        echo '<script>helloHook = {};</script>';
+        $this->setSingleJsSetting('message', 'Hello world!');
         $this->includeJs('js/hello_hook.js');
-        $this->setJsSetting('helloHook', 'Hello world!');
     }
 
     protected function includeJs($file) {
@@ -20,8 +23,8 @@ class ExternalModule extends AbstractExternalModule {
         echo '<script src="' . $this->getUrl($file) . '"></script>';
     }
 
-    protected function setJsSetting($key, $value) {
-        // Use this function to send variables to the frontend
-        echo '<script>' . $key . '=' . json_encode($value) . ';</script>';
+    protected function setSingleJsSetting($key, $value) {
+        // Use this function to send variables to the frontend scoped within an object
+        echo '<script>helloHook.' . $key . '=' . json_encode($value) . ';</script>';
     }
 }
