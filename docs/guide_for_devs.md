@@ -42,14 +42,14 @@ The External Module Development Guide includes a set of [development exercises](
 
 ---
 
-### Hello World
+### [Hello World]({{ site.repo_root }}exercises/hello_world_v0.0.0/)
 This is a "complete" module intended to be used to make sure your development pipeline is set up properly.
 
 Read the section on [module requirements](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#module-requirement) until the section on hooks.
 
 ---
 
-### Hello Hook
+### [Hello Hook]({{ site.repo_root }}exercises/intro_to_hooks/)
 
 This module serves as an introduction to hooks. You will learn how to utilise hook functions to run arbitrary code - in this case, a small bit of JavaScript that displays an alert. While you will not be _writing_ any JavaScript for this portion, you will see how to load in JavaScript files, and how to expose backend variables to the frontend.
 
@@ -80,7 +80,7 @@ Read [the official documentation on calling hooks](https://github.com/vanderbilt
 
 ---
 
-### Intro JS
+### [Intro JS]({{ site.repo_root }}exercises/intro_to_js/)
 
 This module is intended to be used to teach best practices when including JavaScript in your External Modules. It also introduces the use of the REDCap core class, `RCView`; the source for this class is located in the root of your REDCap folder at `Classes/RCView.php` (while clever use of an `onclick` attribute may allow you to complete this module, the purpose is to work with a separate JavaScript file).
 
