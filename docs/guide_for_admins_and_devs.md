@@ -75,3 +75,12 @@ If you want to install a module that is in Github but not the REDCap Repo, acces
 If you want to follow the development of a module in GitHub, you can create a GitHub account and then [_watch_](https://help.github.com/en/github/receiving-notifications-about-activity-on-github/watching-and-unwatching-repositories#watching-a-single-repository) the module. A GitHub account will also allow you to create and comment on issues for any module.
 
 One potential point of confusion when you view a module from GitHub is that each module visible in Github is in a _git repository_, a term often shortened to _git repo_ or just _repo_. This is not the same kind of repo as the REDCap Repo. They just happen to share the same name.
+
+
+## Contributing to modules
+
+While this guide is ostensibly about developing modules, writing code is hardly the only way to contribute to the creation, maintenance and quality of modules or any other software. Even a small program can generate plenty of work that is not writing code. Every program needs documentation that describes how to install, configure and use it. Contributors should be acknowledged in the documentation. Questions about the software need to be answered. Bugs need to be written up. Feature requests need to be reviewed and improved until they make sense to everyone. Software changes need to be tested.
+
+While you can give all of these tasks to software developers, most developers appreciate not having to do _everything_. At the same time, adding the perspective of another person to a project can greatly improve the quality.
+
+Such contributions need not even be to your own team's project. It is easy to contribute to any project being developed publicly in GitHub. One need only create a GitHub account and start contributing through the GitHub issues list on the project. Issues are the first place to pose questions, offer assistance, contribute to a discussion, or find tasks to work on. Everything else can flow from there.
