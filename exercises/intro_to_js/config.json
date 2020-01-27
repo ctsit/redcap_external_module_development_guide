@@ -1,6 +1,6 @@
 {
     "name": "Intro JS",
-    "description": "Adds a counter to the home page",
+    "description": "Adds a counter to the project home page",
     "namespace": "IntroJS\\ExternalModule",
     "framework-version": 3,
     "permissions": [
