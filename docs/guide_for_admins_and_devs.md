@@ -75,3 +75,36 @@ If you want to install a module that is in Github but not the REDCap Repo, acces
 If you want to follow the development of a module in GitHub, you can create a GitHub account and then [_watch_](https://help.github.com/en/github/receiving-notifications-about-activity-on-github/watching-and-unwatching-repositories#watching-a-single-repository) the module. A GitHub account will also allow you to create and comment on issues for any module.
 
 One potential point of confusion when you view a module from GitHub is that each module visible in Github is in a _git repository_, a term often shortened to _git repo_ or just _repo_. This is not the same kind of repo as the REDCap Repo. They just happen to share the same name.
+
+
+## Contributing to modules
+
+While this guide is ostensibly about developing modules, writing code is hardly the only way to contribute to the creation, maintenance and quality of modules or any other software. Even a small program can generate plenty of work that is not writing code. Every program needs documentation that describes how to install, configure and use it. Contributors should be acknowledged in the documentation. Questions about the software need to be answered. Bugs need to be written up. Feature requests need to be reviewed and improved until they make sense to everyone. Software changes need to be tested.
+
+While you can give all of these tasks to software developers, most developers appreciate not having to do _everything_. At the same time, adding the perspective of another person to a project can greatly improve the quality.
+
+Such contributions need not even be to your own team's project. It is easy to contribute to any project being developed publicly in GitHub. One need only create a GitHub account and start contributing through the GitHub issues list on the project. Issues are the first place to pose questions, offer assistance, contribute to a discussion, or find tasks to work on. Everything else can flow from there.
+
+
+## Developing your own modules
+
+If you are going to develop your own modules, there are several issues to address to increase your odds of success. Someone needs to design and write the code. Those skills have be sourced and the person doing the work will need some REDCap training. The development work that person does needs to be reviewed by someone else. The reviewer needs the technical means to test the software and a good workflow for providing feedback. The software needs a good home that lends itself to software development workflows. The choice of homes for the software could be influenced by a need to share the software. Sharing software means a good license agreement will be important.
+
+Ignore these details at your own peril.
+
+
+## Finding and training a developer
+
+While there are a great many contributions a non-developer can make to a module, if you are going to develop your own modules, you will need the skills of a software developer. This raises the issues of sourcing and training that talent.
+
+At an educational institution, students in computer science, data science or informatics programs often make good hires; students in other technical programs are increasingly exposed to programming languages during data analysis. While their specific skills might be in the wrong languages for REDCap development, they can often learn the languages needed. If you have the means to hire a professional developer, do it. Professional experience will generally allow your new hire to be productive sooner than someone who has not worked with as many of the tools involved.
+
+The right candidate for the job will be someone who can demonstrate curiosity and initiative. No one--not even the professional developer--will know everything they need to develop a REDCap module. They will need a willingness to learn REDCap both as a user and an admin while also learning enough of the REDCap code to extend it.
+
+The technical skills needed are in JavaScript and PHP. JavaScript skills are found in anyone that calls themselves a _front end web developer_. Look for someone who has demonstrated their skills in JavaScript on the job, in an open source project or in work of their own. PHP skills are harder to find than Javascript skills, but they will also be needed for the job. You might have to accept a candidate who has not coded in PHP but seems able to learn.
+
+Ask candidates if they have a public GitHub repository. Not everyone has this, but, where they exist, they provide an opportunity to see the candidate's code first-hand. These repos also demonstrate some experience with GitHub, git, and open source software development. All of these are important for module development.
+
+Once you have hired a developer, they will need to be trained. Even the best candidates are not likely to know anything about REDCap. Train every developer as if they are to become a REDCap Admin. Have them watch all of VUMC's [REDCap training videos](https://projectredcap.org/resources/videos/). Assign them a complicated project building task or a series of tasks that will require they use all the common features of REDCap. Have your new hire read this document at [https://ctsit.github.io/redcap_external_module_development_guide/](https://ctsit.github.io/redcap_external_module_development_guide/) Have them build all of the exercise modules at [https://ctsit.github.io/redcap_external_module_development_guide/guide_for_devs](https://ctsit.github.io/redcap_external_module_development_guide/guide_for_devs)
+
+Your new hire should not work alone. Connect them to the REDCap community. Sign them up for the [REDCap Community website](https://projectredcap.org/resources/community/). Introduce them to developers you know so they can feel a part of that sub-community as well. Invite them to [REDCapCon](https://projectredcap.org/about/redcapcon/).
