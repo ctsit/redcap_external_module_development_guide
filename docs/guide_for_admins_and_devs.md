@@ -97,7 +97,7 @@ Ignore these details at your own peril.
 
 While there are a great many contributions a non-developer can make to a module, if you are going to develop your own modules, you will need the skills of a software developer. This raises the issues of sourcing and training that talent.
 
-At an educational institution, students in computer science, data science or informatics programs often make good hires. While their specific skills might be in the wrong languages for REDCap development, they can often learn the languages needed. If you have the means to hire a professional developer, do it. Professional experience will generally allow your new hire to be productive sooner than someone who has not worked with as many of the tools involved.
+At an educational institution, students in computer science, data science or informatics programs often make good hires; students in other technical programs are increasingly exposed to programming languages during data analysis. While their specific skills might be in the wrong languages for REDCap development, they can often learn the languages needed. If you have the means to hire a professional developer, do it. Professional experience will generally allow your new hire to be productive sooner than someone who has not worked with as many of the tools involved.
 
 The right candidate for the job will be someone who can demonstrate curiosity and initiative. No one--not even the professional developer--will know everything they need to develop a REDCap module. They will need a willingness to learn REDCap both as a user and an admin while also learning enough of the REDCap code to extend it.
 
