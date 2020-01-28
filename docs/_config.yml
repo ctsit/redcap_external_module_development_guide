@@ -2,7 +2,9 @@ title: REDCap External Module Development Guide
 description: REDCap External Module Development Guide
 repository: ctsit/redcap_external_module_development_guide
 
-markdown: kramdown
+repo_root: https://github.com/ctsit/redcap_external_module_development_guide/
+
+markdown: CommonMarkGhPages
 
 # ToDo: Review this theme content and remove stuff if it is not needed
 theme: jekyll-theme-minimal

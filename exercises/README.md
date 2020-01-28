@@ -1,11 +1,10 @@
 # External Module Development Exercises
 
-The External Module Development Guide includes a set of [development exercises](./) to use as a guide for module development. Each exercise teaches a different facet of module development. The majority of the exercises are missing essential functionality with comments denoting the regions where the functionality should be added.
+The External Module Development Guide includes a set of development exercises to use as a guide for module development. Each exercise teaches a different facet of module development. The majority of the exercises are missing essential functionality with comments denoting the regions where the functionality should be added.
 
 ## Preface
 
 For guidance in developing modules and resources for completing these exercises, see [REDCap External Module Development Guide](https://ctsit.github.io/redcap_external_module_development_guide/). 
-
 
 ## Modules
 
@@ -19,3 +18,7 @@ Read the section on [module requirements](https://github.com/vanderbilt/redcap-e
 ### Hello Hook
 
 Read [the official documentation on calling hooks](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#how-to-call-redcap-hooks).
+
+### Intro JS
+
+Read [the official documentation on module functions, specifically `getUrl`](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/v3.md). You may also find it helpful to refer to previous exercises where JavaScript was used.
