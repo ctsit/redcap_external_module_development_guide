@@ -162,5 +162,4 @@ Every developer _must_ use REDCap Docker Compose or a similar local development 
 
 REDCap Admins would also be well-served to use a local REDCap. It will allow them to test module revisions earlier without any risks to a shared REDCap instance. This is especially important if there is only one developer on the team. _Someone_ needs to run the first _local_ test of the code.
 
-Wherever they test, REDCap Admins must test the new module before it is installed in production. They will have the best perspective on how it will integrate into the normal REDCap workflows. They will be the person who has to enable the module and configure it in production. If the admin is not they end user of the new module's features they will be charged with explaining it and/or documenting it for the REDCap users. The REDCap Admin will bear the burden of any failings in the module.
-
+Wherever they test, REDCap Admins must test the new module before it is installed in production. They will have the best perspective on how it will integrate into the normal REDCap workflows. They will be the person who has to enable the module and configure it in production. If the admin is not the end user of the new module's features they will be charged with explaining it and/or documenting it for the REDCap users. The REDCap Admin will bear the burden of any failings in the module.
