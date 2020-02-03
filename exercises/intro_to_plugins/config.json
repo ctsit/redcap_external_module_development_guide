@@ -1,6 +1,6 @@
 {
     "name": "Hello Plugin",
-    "description": "Module that provides a freindly environment to admins and users alike",
+    "description": "Module that provides a friendly page to announce its own existence",
     "namespace": "HelloPlugin\\ExternalModule",
     "framework-version": 3,
     "authors": [
