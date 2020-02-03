@@ -163,3 +163,35 @@ Every developer _must_ use REDCap Docker Compose or a similar local development 
 REDCap Admins would also be well-served to use a local REDCap. It will allow them to test module revisions earlier without any risks to a shared REDCap instance. This is especially important if there is only one developer on the team. _Someone_ needs to run the first _local_ test of the code.
 
 Wherever they test, REDCap Admins must test the new module before it is installed in production. They will have the best perspective on how it will integrate into the normal REDCap workflows. They will be the person who has to enable the module and configure it in production. If the admin is not the end user of the new module's features they will be charged with explaining it and/or documenting it for the REDCap users. The REDCap Admin will bear the burden of any failings in the module.
+
+## Sharing your work
+
+Sharing is caring
+    CTSA funding begs for it
+    It’s not automatic
+Open source licenses
+    Freedom to use, reuse, and adapt
+    Protection from my apathy, reassignment, retirement, death, etc.
+    Assurance that your business is not at risk
+    Eases collaboration
+    Vandy requires you use an open-source license for submitting to the REDCap Repo.
+Releasing/publishing modules - the workflow
+    Make a release
+    Deploy it locally
+    Test it locally in prod.
+    Publish it in the REDCap repo
+    https://redcap.vanderbilt.edu/consortium/modules/index.php
+Get DOI
+    Git repos and Zenodo
+    Figshare
+
+
+## Talk about your work
+
+The hardwork invested to make a module useful, portable, and awesome might seem wasted if know one but you ever uses it. It's important to not just share your work, but to promote it in the REDCap community so that other REDCap Admins know there is a tool that solves a problem they might also have. By telling the REDCap Community about the modules you have developed and the ideas you have for new and existing modules, you help REDCap administrators and module developers at other sites know the tools available to them. REDCap admins might want the new feature your module adds. Module developers might see that your module has code that would help them solve a related problem. You could even find collaborators for your work who are willing to share ideas, test code, write up bugs, and promote your work. The REDCap Community is rich with subject matter experts not only on REDCap but on clinical research, data collection, survey design, and human factors. They can provide valuable insight and a different perspective on how your work will be viewed by the end user. 
+
+The promotion of your work can talk a few forms. New ideas, new modules, and new module features should be shared with the [REDCap Community](http://community.projectredcap.org/). Anyone member of the REDCap Community can create a post on the REDCap Community website. The post will be visible to all the registered members. You can create a post that lets other developers and admins know what you’re working on, or to solicit feedback and collaboration on the module. 
+
+The REDCap Friday call provides a forum to do a talk about your work and demonstrate it to the community. This call reaches an average live audience of 90 REDCap admins world-wide. It is the most visible way to advertise and demonstrate modules. It also allows other community members to ask questions and suggest features that your team may not have thought of. 
+
+The annual REDCap conference provide another way to reach the REDCap community. The conference is attended by over 400 REDCap Admins, developers, and leaders in the REDCap community. It provides opportunities to engage in face-to-face conversations about your work and others, solicit ideas and meet collaborators. A poster presentation is a great way to start a dialog about your work and meet people who are interested in it.
