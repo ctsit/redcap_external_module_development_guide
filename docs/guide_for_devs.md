@@ -137,3 +137,64 @@ function increase() {
 
 </details>
 <br />
+
+---
+
+### [Hello Plugin]({{ site.repo_root }}exercises/intro_to_plugins/)
+
+This module introduces the use of plugins. The provided module already has a plugin page available for admins in the Control Center; the goal of this exercise is to add an additional plugin page accessible _at the project level_. Unlike other modules, you will need to create an entirely new PHP file for this project, referring to `pages/control_center_custom_page.php` should be useful.
+
+Read [the official documentation on creating plugin pages](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#how-to-create-plugin-pages-for-your-module).
+
+Icons can be set in a `link` object under `config.json` which will appear next to the link for a corresponding plugin page. In framework version >= 3, you have access to [Font Awesome](https://fontawesome.com/icons?d=gallery) icons.  
+When assigning icons, the entry will appear as follows: `fa<style> fa-<icon_name>`, where available `<style>`s are:
+- s: solid
+- r: regular
+- l: light
+- d: duotone
+
+<details>
+<summary>Example Solution
+</summary>
+
+`config.json`
+```json
+   "links": {
+      "control-center": [
+         {
+            "name": "Hello Admin",
+            "icon": "fas fa-globe",
+            "url": "pages/control_center_custom_page.php"
+         }
+      ],
+      "project": [
+         {
+            "name": "Hello Project",
+            "icon": "fas hand-paper",
+            "url": "pages/project_custom_page.php"
+         }
+      ]
+   }
+```
+
+`pages/project_custom_page.php`
+```php
+<?php
+require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
+
+$title = RCView::img(['src' => APP_PATH_IMAGES . 'bell.png']) . ' ' . REDCap::escapeHtml('Control Center Page');
+echo RCView::h4([], $title);
+
+$module->sayHello();
+
+require_once APP_PATH_DOCROOT . 'ProjectGeneral/footer.php';
+```
+
+Don't forget to update docs when you add new features!
+`README.md`
+```markdown
+Provides pages that say "Hello, world" in the control center and in projects.
+```
+
+</details>
+<br />

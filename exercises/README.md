@@ -22,3 +22,7 @@ Read [the official documentation on calling hooks](https://github.com/vanderbilt
 ### Intro JS
 
 Read [the official documentation on module functions, specifically `getUrl`](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/v3.md). You may also find it helpful to refer to previous exercises where JavaScript was used.
+
+## Hello Plugin
+
+Read [the official documentation on creating plugin pages](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#how-to-create-plugin-pages-for-your-module).
