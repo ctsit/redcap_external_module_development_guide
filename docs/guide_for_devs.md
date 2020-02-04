@@ -147,7 +147,7 @@ This module introduces the use of plugins. The provided module already has a plu
 Read [the official documentation on creating plugin pages](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#how-to-create-plugin-pages-for-your-module).
 
 Plugins appear as links in the left-hand menu. These links can be decorated with icons set in a `link` object under `config.json`. In framework version >= 3, you have access to [Font Awesome](https://fontawesome.com/icons?d=gallery) icons.  
-When assigning icons, the entry will appear as follows: `fa<style> fa-<icon_name>`, where available `<style>`s are:
+When assigning Font Awesome icons, the entry will appear as follows: `fa<style> fa-<icon_name>`, where available `<style>`s are:
 - s: solid
 - r: regular
 - l: light
