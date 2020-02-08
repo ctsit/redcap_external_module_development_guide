@@ -10,4 +10,9 @@ markdown: CommonMarkGhPages
 theme: jekyll-theme-minimal
 logo: /assets/img/logo.png
 show_downloads: true
+authors:
+  - <a href="https://github.com/pbchase">Philip Chase</a>
+  - <a href="https://vivo.ufl.edu/display/n32455">Taryn Stoffs</a>
+  - <a href="https://github.com/ChemiKyle">Kyle Chesney</a>
+  - <a href="https://vivo.ufl.edu/display/n64866">Christopher P Barnes</a>
 google_analytics:
