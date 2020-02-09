@@ -41,13 +41,13 @@ These challenges are why you should avoid using Plugins and Hooks whenever possi
 
 ## What is “right” about modules?
 
-All of the bad features of the older REDCap extension methods lead us to what modules get right. Modules can be located, downloaded, enabled and configured through the REDCap GUI by a REDCap Admin. The External Module Framework allows projects to be enabled and configured on a per-project basis. The list of enabled modules is visible in the REDCap interface. They can be disabled as easily as they were enabled.
+All of the bad features of the older REDCap extension methods lead us to what modules get right. Modules can be located, downloaded, enabled, and configured through the REDCap GUI by a REDCap Admin. The External Module Framework allows projects to be enabled and configured on a per-project basis. The list of enabled modules is visible in the REDCap interface. They can be disabled as easily as they were enabled.
 
-The EM Framework requires modules have versions numbers when deployed. The version numbers integrate into the module upgrade features of the Framework. The REDCap Admin can see what version number is enabled, what versions have been downloaded to the server and what versions are ready to be enabled. The upgrade is simple. Should the new version prove flawed, the REDCap Admin can revert to the old version just as easily.
+The EM Framework requires modules have version numbers when deployed. The version numbers integrate into the module upgrade features of the Framework. The REDCap Admin can see what version number is enabled, what versions have been downloaded to the server, and what versions are ready to be enabled. The upgrade is simple. Should the new version prove flawed, the REDCap Admin can revert to the old version just as easily.
 
-The EM framework can detect the some of the more egreious coding errors, prevent the code from running, and disable the module that caused the problem. This lets the REDCap server continue normal function.
+The EM framework can detect some of the more egregious coding errors, prevent the code from running, and disable the module that caused the problem. The protective features of the EM framework let the REDCap server continue normal function.
 
-These features are possible because the External Module Framework provides an infrastructure for software extension management. The EM Framework was designed to address the many management issues software extensions can create. It provides the rules for enabling, disabling, configuring, upgrading, downgrading, testing, and much more. It provides the interfaces the REDCap Admin sees. It defines rules modules--and their developers--must follow to integrate into those interfaces.
+These features are possible because the External Module Framework provides an infrastructure for software extension management. It defines the rules for enabling, disabling, configuring, upgrading, downgrading, testing, and much more. It provides the interfaces the REDCap Admin sees. It defines rules modules--and their developers--must follow to integrate into those interfaces.
 
 ## REDCap Repo
 
