@@ -167,24 +167,17 @@ Wherever they test, REDCap Admins must check the new module before they install 
 
 ## Sharing your work
 
-Sharing is caring
-    CTSA funding begs for it
-    It’s not automatic
-Open source licenses
-    Freedom to use, reuse, and adapt
-    Protection from my apathy, reassignment, retirement, death, etc.
-    Assurance that your business is not at risk
-    Eases collaboration
-    Vandy requires you use an open-source license for submitting to the REDCap Repo.
-Releasing/publishing modules - the workflow
-    Make a release
-    Deploy it locally
-    Test it locally in prod.
-    Publish it in the REDCap repo
-    https://redcap.vanderbilt.edu/consortium/modules/index.php
-Get DOI
-    Git repos and Zenodo
-    Figshare
+There is considerable value in sharing the ideas and software extensions that modify REDCap. Yet the software will not share itself. Any team making modules or any other extension for REDCap needs to be proactive on a few fronts.
+
+While Vanderbilt requires an open-source license to publish a module in the REDCap Repo, the license is essential in _any_ software another team might use. You should proactively place an open source license on your software project if you plan to share it. An open-source license protects the consumer's freedom to use, reuse, and adapt the software. Should the creator of the software lose interest in maintaining it, the software maintenance burden might need to shift to someone else. An open-source license provides legal freedom for another team to do that. At the same time, the open-source license protects the rights of collaborators and contributors to modify the software, use it, and share those modifications. Protect other teams' rights to use your creation by putting an open source license on the software from day one. It communicates your intent to build something to be shared by the community.
+
+Eventually, your work needs to be released, deployed, and published. Releasing is the process by which you formally say, "This idea is whole and functional." An entry in a ChangeLog or a version number is a good way to communicate that your product, its new feature, or a bug fix is ready for use. An entry in a ChangeLog file is the right place to summarize what has changed since the previous release and put a version number on those changes. A version number _tag_ in the commit history is a great way to communicate to GitHub and future developers exactly when and where that happened. These events describe a _release_.
+
+Once you have a release, it needs to be _deployed_. You should deploy the new version at your site in a test instance and then in Production. These are the final steps to make sure the release is right.
+
+If the deployments go well and you think you have something of interest to the REDCap community, you can share it via the [REDCap Repo](https://redcap.vanderbilt.edu/consortium/modules/index.php). There's a submission form by which you describe your module, its requirements, and where to find it. The VUMC REDCap Team will review your module. If the module passes review, VUMC will move it into the Repo. If VUMC finds any issues, they will send you feedback on how to improve your module. The REDCap Repo is the easiest way for members of the REDCap community to find, download, and enable your work.
+
+While the REDCap Repo is the best way to manage the technical sharing of a module within the REDCap community, this doesn't quite meet the requirements of the academic community. Academics value publications and citations. Fortunately, there are tools to bridge the gap between a software repository and a citation. A digital object identifier or _DOI_ is a unique identifier for a document, dataset, image, software package, or other data type. Typically DOIs identify online objects. They are well-respected in the academic, scientific, and governmental communities. There are online service providers that will generate, register, and curate DOIs for your creative works. One of these providers, [zenodo.org](https://zenodo.org/), has excellent integration with GitHub. Once you make the linkage between a GitHub repo and Zenodo, Zenodo will make a DOI and citation for the repo. Future GitHub releases will automatically get a new citable DOI in Zenodo. Cite these DOIs in academic articles, posters, grant applications, and sponsor reports, as you would with any other publication.
 
 
 ## Talk about your work
