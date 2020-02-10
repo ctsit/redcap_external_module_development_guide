@@ -11,7 +11,7 @@ This guide provides the technical background developers need to write and test m
 
 ### REDCap Training Videos
 
-It's essential that you understand how to use REDCap before trying to develop modules for it. Vanderbilt provides a series of videos that provide basic training in how to use REDCap to create and administer instruments and surveys. See [https://projectredcap.org/resources/videos/](https://projectredcap.org/resources/videos/)
+You must understand how to use REDCap before trying to develop modules for it. Vanderbilt provides a series of videos that provide basic training in how to use REDCap to create and administer instruments and surveys. See [https://projectredcap.org/resources/videos/](https://projectredcap.org/resources/videos/)
 
 The University of Colorado Denver has created a series of videos that address more advanced topics. You can access all of those videos at their [YouTube Playlist](https://www.youtube.com/playlist?list=PLrnf34ZtZ9FpHcZyZuNnNFZ9cEbhijNGf).
 
@@ -23,22 +23,22 @@ You will likely find it helpful to keep Vanderbilt's [official External Module d
 
 ### REDCap Repo
 
-Vanderbilt publishes modules submitted by the REDCap Community in the [REDCap Repo](https://redcap.vanderbilt.edu/consortium/modules/index.php). The source code for each of these modules is accessible in GitHub and linked from the entries in the REDCap Repo. These modules provide fully functional code examples. As each module in the REDCap Repo is required to have an open source license, their code can be used in other modules.
+Vanderbilt publishes modules submitted by the REDCap Community in the [REDCap Repo](https://redcap.vanderbilt.edu/consortium/modules/index.php). The source code for each module is accessible in GitHub and linked from the entries in the REDCap Repo. These modules provide fully functional code examples. As each module in the REDCap Repo must have an open-source license, you are free to use their code in other modules.
 
 
 ### GitHub
 
-Beyond those in the REDCap Repo, [GitHub](https://github.com) is commonly used by developers in the REDCap community to host and share modules. Many of these modules are tagged with the topic 'redcap-external-module' and can be located with a [GitHub topic search](https://github.com/search?q=topic%3Aredcap-external-module&type=Repositories)
+Beyond those in the REDCap Repo, [GitHub](https://github.com) is commonly used by developers in the REDCap community to host and share modules. Many module developers tag their modules with the topic 'redcap-external-module'. This shared topic allows you to find them with a [GitHub topic search](https://github.com/search?q=topic%3Aredcap-external-module&type=Repositories)
 
 
 ## Setting Up Your Environment
 Read the section of the official documentation on [naming a module](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#naming-a-module). You should copy the contents of this directory to the `modules` directory of your REDCap instance. Assuming you are using Andy Martin's [redcap-docker-compose environment](https://github.com/123andy/redcap-docker-compose), the modules directory is located at `www/modules/`.  
-Please note that - with the exception of **Hello World** - you will need to mark the [semantic version](https://semver.org/) of each module - in short, you will need to append `_v0.0.0` to each directory - for it to be recognized by REDCap. These are intentionally left off to simulate having just `git clone`d a module from a public repository. Public repositories should _not_ have semantic versions in their titles. REDCap uses the directory name to determine module versions, each version will have its own directory, you should use `git tag`s and releases.
+Please note that - except for **Hello World** - you will need to mark the [semantic version](https://semver.org/) of each module - in short, you will need to append `_v0.0.0` to each directory - for the EM Framework to recognize it is a module. These are intentionally left off to simulate having just `git clone`d a module from a public repository. Public repositories should _not_ have semantic versions in their titles. REDCap uses the directory name to determine module versions. As such, each version will have a separate directory. Use `git tag`s to apply version numbers to the appropriate commit.
 
 
 ## External Module Development Exercises
 
-The External Module Development Guide includes a set of [development exercises](https://github.com/ctsit/redcap_external_module_development_guide/exercises/) to use as a guide for module development. Each exercise teaches a different facet of module development. The majority of the exercises are missing essential functionality with comments denoting the regions where the functionality should be added.
+The External Module Development Guide includes a set of [development exercises](https://github.com/ctsit/redcap_external_module_development_guide/exercises/) to use as a guide for module development. Each activity teaches a different facet of module development. Most of the modules are intentionally incomplete. They generally have comments denoting regions where you will need to add code to implement a missing feature.
 
 ---
 
@@ -51,7 +51,7 @@ Read the section on [module requirements](https://github.com/vanderbilt/redcap-e
 
 ### [Hello Hook]({{ site.repo_root }}exercises/intro_to_hooks/)
 
-This module serves as an introduction to hooks. You will learn how to utilise hook functions to run arbitrary code - in this case, a small bit of JavaScript that displays an alert. While you will not be _writing_ any JavaScript for this portion, you will see how to load in JavaScript files, and how to expose backend variables to the frontend.
+This module serves as an introduction to hooks. You will learn how to utilize hook functions to run arbitrary code - in this case, a small bit of JavaScript that displays an alert. While you will not be _writing_ any JavaScript for this portion, you will see how to load in JavaScript files, and how to expose backend variables to the frontend.
 
 Read [the official documentation on calling hooks](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#how-to-call-redcap-hooks).
 
@@ -82,9 +82,9 @@ Read [the official documentation on calling hooks](https://github.com/vanderbilt
 
 ### [Intro JS]({{ site.repo_root }}exercises/intro_to_js/)
 
-This module is intended to be used to teach best practices when including JavaScript in your External Modules. It also introduces the use of the REDCap core class, `RCView`; the source for this class is located in the root of your REDCap folder at `Classes/RCView.php` (while clever use of an `onclick` attribute may allow you to complete this module, the purpose is to work with a separate JavaScript file).
+This module teaches best practices when including JavaScript in your External Modules. It also introduces the use of the REDCap core class, `RCView`; the source for this class is located in the root of your REDCap folder at `Classes/RCView.php`. Note that while clever use of an `onclick` attribute might allow you to complete this module, the purpose is to work with a separate JavaScript file.
 
-Read [the official documentation on module functions, specifically `getUrl`](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/v3.md). You may also find it helpful to refer to previous exercises where JavaScript was used.
+Read [the official documentation on module functions, specifically `getUrl`](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/v3.md). You might also find it helpful to refer to previous exercises for examples of JavaScript use.
 
 While this module does not use any variables, note that when working with JavaScript it is [recommended to scope the variables within an object](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#javascript-recommendations). Two sample helper functions to accomplish this goal in PHP are written below.
 
@@ -142,11 +142,11 @@ function increase() {
 
 ### [Hello Plugin]({{ site.repo_root }}exercises/intro_to_plugins/)
 
-This module introduces the use of plugins. The provided module already has a plugin page available for admins in the Control Center; the goal of this exercise is to add an additional plugin page accessible _at the project level_. Unlike other modules, you will need to create an entirely new PHP file for this project, referring to `pages/control_center_custom_page.php` should be useful.
+This module introduces the use of plugins. The provided module already has a plugin page available for admins in the Control Center; the goal of this exercise is to add a second plugin page accessible _at the project level_. Unlike other modules, you will need to create an entirely new PHP file for this project, referring to `pages/control_center_custom_page.php` should be useful.
 
 Read [the official documentation on creating plugin pages](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#how-to-create-plugin-pages-for-your-module).
 
-Plugins appear as links in the left-hand menu. These links can be decorated with icons set in a `link` object under `config.json`. In framework version >= 3, you have access to [Font Awesome](https://fontawesome.com/icons?d=gallery) icons.  
+Plugins appear as links in the left-hand menu. The EM framework allows you to decorate the links with icons set in a `link` object under `config.json`. In framework version >= 3, you have access to [Font Awesome](https://fontawesome.com/icons?d=gallery) icons.  
 When assigning Font Awesome icons, the entry will appear as follows: `fa<style> fa-<icon_name>`, where available `<style>`s are:
 - s: solid
 - r: regular
