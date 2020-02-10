@@ -190,7 +190,7 @@ $module->sayHello();
 require_once APP_PATH_DOCROOT . 'ProjectGeneral/footer.php';
 ```
 
-Don't forget to update docs when you add new features!
+Don't forget to update docs when you add new features!  
 `README.md`
 ```markdown
 Provides pages that say "Hello, world" in the control center and in projects.
@@ -198,3 +198,105 @@ Provides pages that say "Hello, world" in the control center and in projects.
 
 </details>
 <br />
+
+---
+
+### [Accessing Variables]({{ site.repo_root }}exercises/accessing_variables/)
+
+While working on this module, you will learn how to access constants and variables defined by REDCap. You will also cover using `project-settings` to allow users to set variables and accessing those variables.
+
+You may display this via a hook or a project plugin page.
+
+The goal of this exercise is to create a module that displays a user's:
+1. Username
+1. Admin (aka superuser) status
+1. Their user rights
+1. The current page path
+1. The current project's `project_id`
+1. The value of a variable set in the module's configuration menu
+
+Check the [official External Module documentation on functions](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/intro.md) for functions which will provide this information for you. Useful phrases to search for are "User" and "projectSetting".
+
+Note that there is an unlisted property of the [`User` object](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/intro.md#user-method) that you will need: 
+
+```php
+$User = $this->framework->getUser();
+$User->username;
+```
+
+If your programming environment has a debugger available, it is highly recommended to use it to see the accessible constants. If you do not have a debugger or cannot connect it to your REDCap docker container, please view the list below. Note that most of these are available as functions.  
+<details>
+<summary>Useful global constants
+</summary>
+
+- **PAGE**: The current loaded file and its path with the root being the active REDCap folder, (root being, i.e. `redcap_v9.3.5/`); this is the only constant listed that is not easily determined by a function
+- **PROJECT_ID**: The numerical ID of the project being viewed
+- **USERID**: The username of the user viewing the page
+- **SUPER_USER**: A boolean integer indication if the user from **USERID** has admin privileges
+
+</details>
+<br />
+
+As before, documentation _must_ be updated when introducing features. This is even more important when adding functionality that users interact with (e.g. an entry in `project-settings` in the `config.json`)!
+
+<details>
+<summary>Example Solution Via a Hook
+</summary>
+
+Note that this is a _bare minimum_ implementation; because the goal of this exercise is to find out how to access the variables needed, this solution only aims to show how to access those variables. When displaying information to users, you should _not_ use basic functions like `print_r` (unless the contents will be showing up in the body of a plugin page).  
+`ExternalModule.php`
+```php
+    //FIXME: Write and use functions to show users pertinent information
+    function redcap_every_page_top() {
+        $this->displayVars();
+    }
+
+    function displayVars() {
+        print_r("<pre>"); // Wrap the display area in <pre> tag for formatting
+
+        $userobj = $this->framework->getUser();
+
+        print_r("Username: " . $userobj->username . "\n");
+        print_r("You are " . ( ($userobj->isSuperUser()) ? "" : "not " ) . "a superuser.\n");
+        print_r("Your user rights: \n");
+        var_dump($userobj->getRights());
+
+        print_r("Page path: " . PAGE . "\n");
+        print_r("Project ID: " . $this->framework->getProjectId() . "\n"); // Display project ID via framework function
+        // OR
+        //print_r("Project ID: " . PROJECT_ID . "\n"); // Display project ID via constant
+        print_r("Custom Setting: " . $this->framework->getProjectSetting('custom_setting'));
+
+        print_r("</pre>");
+    }
+```
+
+`config.json`
+```json
+    "permissions": [
+        "redcap_every_page_top"
+    ],
+    "project-settings": [
+        {
+            "key": "custom_setting",
+            "name": "Custom Setting",
+            "type": "text"
+        }
+    ]
+```
+
+An unordered list is a great way to explain simple options to users.  
+`README.md`
+```markdown
+Displays information relevant to users, including their user permissions and location in REDCap.
+
+...
+
+## Project Configuration
+- **Custom Setting**: A message that will be displayed along with other information
+
+```
+
+</details>
+<br />
+
