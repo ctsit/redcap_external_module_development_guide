@@ -82,7 +82,7 @@ Read [the official documentation on calling hooks](https://github.com/vanderbilt
 
 ### [Intro JS]({{ site.repo_root }}exercises/intro_to_js/)
 
-This module teaches best practices when including JavaScript in your External Modules. It also introduces the use of the REDCap core class, `RCView`. The source for this class is located in the root of your REDCap folder at `Classes/RCView.php`. Note that while clever use of an `onclick` attribute might allow you to complete this module, the purpose is to work with a separate JavaScript file.
+This module teaches best practices when including JavaScript in your External Modules. It also introduces the use of the REDCap core class, `RCView`; the source for this class is located in the root of your REDCap folder at `Classes/RCView.php`. Note that while clever use of an `onclick` attribute might allow you to complete this module, the purpose is to work with a separate JavaScript file.
 
 Read [the official documentation on module functions, specifically `getUrl`](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/v3.md). You might also find it helpful to refer to previous exercises for examples of JavaScript use.
 
