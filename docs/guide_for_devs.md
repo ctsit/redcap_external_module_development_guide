@@ -45,7 +45,7 @@ The External Module Development Guide includes a set of [development exercises](
 ### [Hello World]({{ site.repo_root }}exercises/hello_world_v0.0.0/)
 This is a "complete" module intended to be used to make sure your development pipeline is set up properly.
 
-Read the section on [module requirements](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#module-requirement) until the part on hooks.
+Read the section on [module requirements](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#module-requirement) until the section on hooks.
 
 ---
 
