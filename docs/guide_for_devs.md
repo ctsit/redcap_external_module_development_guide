@@ -224,7 +224,7 @@ $User = $this->framework->getUser();
 $User->username;
 ```
 
-If your programming environment has a debugger available, it is highly recommended to use it to see the accessible constants. If you do not have a debugger or cannot connect it to your REDCap docker container, please view the list below. Note that most of these are available as functions.  
+If your programming environment has a debugger available, you can use it to see the accessible constants. If you do not have a debugger or cannot connect it to your REDCap docker container, please view the list below. Note that most of these are available as functions.  
 <details>
 <summary>Useful global constants
 </summary>
