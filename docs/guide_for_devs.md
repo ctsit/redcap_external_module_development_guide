@@ -215,7 +215,7 @@ The goal of this exercise is to create a module that displays a user's:
 1. The current project's `project_id`
 1. The value of a variable set in the module's configuration menu
 
-Check the [official External Module documentation on functions](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/intro.md) for functions which will provide this information for you. Useful phrases to search for are "User" and "projectSetting".
+Check the [official External Module documentation on functions](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/intro.md) for functions which provide this information for you. Useful phrases to search for are "User" and "projectSetting".
 
 Note that there is an unlisted property of the [`User` object](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/intro.md#user-method) that you will need: 
 
@@ -299,4 +299,3 @@ Displays information relevant to users, including their user permissions and loc
 
 </details>
 <br />
-
