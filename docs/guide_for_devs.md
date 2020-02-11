@@ -243,7 +243,7 @@ As before, documentation _must_ be updated when introducing features. This is ev
 <summary>Example Solution Via a Hook
 </summary>
 
-Note that this is a _bare minimum_ implementation; because the goal of this exercise is to find out how to access the variables needed, this solution only aims to show how to access those variables. When displaying information to users, you should _not_ use basic functions like `print_r` (unless the contents will be showing up in the body of a plugin page).  
+This is a _bare minimum_ implementation that demonstrates how to access REDCap variables. The output is _ugly_. An attractive display of those variables is left as an exercise for the student.  
 `ExternalModule.php`
 ```php
     //FIXME: Write and use functions to show users pertinent information
