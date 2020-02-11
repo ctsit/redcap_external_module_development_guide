@@ -26,3 +26,7 @@ Read [the official documentation on module functions, specifically `getUrl`](htt
 ## Hello Plugin
 
 Read [the official documentation on creating plugin pages](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#how-to-create-plugin-pages-for-your-module).
+
+## Accessing Variables
+
+Read [the official documentation on module functions](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/intro.md). Search for functions containing `User` and `ProjectSetting`.
