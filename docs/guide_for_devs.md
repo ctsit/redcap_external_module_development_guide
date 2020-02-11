@@ -203,7 +203,7 @@ Provides pages that say "Hello, world" in the control center and in projects.
 
 ### [Accessing Variables]({{ site.repo_root }}exercises/accessing_variables/)
 
-While working on this module, you will learn how to access constants and variables defined by REDCap. You will also cover using `project-settings` to allow users to set variables and accessing those variables.
+While working on this module, you will learn how to access constants and variables defined by REDCap. You will also use `project-settings` to allow users to set variables.
 
 You may display this via a hook or a project plugin page.
 
