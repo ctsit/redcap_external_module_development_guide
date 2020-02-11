@@ -229,7 +229,7 @@ If your programming environment has a debugger available, you can use it to see 
 <summary>Useful global constants
 </summary>
 
-- **PAGE**: The current loaded file and its path with the root being the active REDCap folder, (root being, i.e. `redcap_v9.3.5/`); this is the only constant listed that is not easily determined by a function
+- **PAGE**: The path portion of the URL for the current web page. This is the only constant listed that is not easily determined by a function
 - **PROJECT_ID**: The numerical ID of the project being viewed
 - **USERID**: The username of the user viewing the page
 - **SUPER_USER**: A boolean integer indication if the user from **USERID** has admin privileges
