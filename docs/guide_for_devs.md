@@ -299,3 +299,75 @@ Displays information relevant to users, including their user permissions and loc
 
 </details>
 <br />
+
+---
+
+### [Record Wrangling]({{ site.repo_root }}exercises/record_wrangling/)
+
+**Setup**: A prebuilt project file is provided for this module. You will need to create a new project, select the "Upload a REDCap project XML file" option, and use the `RecordWrangling_project.xml` file located at the root of the module directory.
+
+This module introduces you to interactions with the `redcap_data` table. You will finish a plugin that will allow a user with admin rights to insert an arbitrary text value to a field across all records of a project. You should look in `Classes/REDCap.php` and `ExternalModules/AbstractExternalModule.php` in the root of your REDCap directory for `getData` and `saveData` functions.
+
+This module uses AJAX, your updates should be made in `pages/ajaxpage.php`. You should still look through the other files to understand the module as a whole.
+
+You may have noticed the `setData` function in the official module documentation. At first glance, this function may appear suitable for this exercise, but looking at its source code reveals qualities that make it unsuitable for any plugin. While it takes only 3 arguments (`$record`, `$fieldName`, and `$values`), it actually requires an `event_id` - a numerical identifier - to be detected for it to function properly; this is fine for a hook that is intended to run on a record page. **It also does not log at all!**
+
+Note: The official documentation is a bit unclear on the appropriateness of using the `REDCap` class methods. The [first paragraph of the official documentation](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#external-module-framework---official-documentation) mentions that all '[m]odules can utilize any of the "REDCap" class methods (e.g., `\REDCap::getData`)', but later, the same document recommends developers [do not](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#available-developer-methods-in-external-modules) reference other methods or files; an assumption is made that this statement is referring to only classes contained in the `ExternalModules` folder. The solutions provided below use both methods.
+
+<details>
+<summary>Example Solution
+</summary>
+
+`pages/ajaxpage.php`
+```php
+    //FIXME: use a function to getData and assign it to a variable called $redcap_data
+
+    /* method 1 a: use the module getData method
+     * passing project ID and an empty array for record ID to get data ALL data for the project ID
+     * Not listed in official documentation, must read AbstractExternalModule source code
+     */
+    $redcap_data = $module->framework->getData($pid, []);
+
+    /* method 1 b: use the REDCap class directly
+     * pass only the project ID
+     * returns ALL data for the project ID
+     */
+    $redcap_data = \REDCap::getData($pid);
+
+    /* method 2: use the REDCap class directly
+     * build an array specifying project ID and fields
+     * returns only the relevant field(s)
+     */
+    $get_data = [
+        'project_id' => $pid,
+        'fields' => $field_name
+        ];
+    $redcap_data = \REDCap::getData($get_data);
+
+    $module->changeField($redcap_data, $field_name, $new_value); // update the $redcap_data array inplace
+
+    //FIXME: use a function to target this project's $pid and use the array $redcap_data to overwrite
+    // the database
+
+    /* method 1: use the module saveData method
+     * iterate over the altered $redcap_data array
+     * repeatedly call the saveData method
+     */
+    foreach($redcap_data as $record_id => $events) {
+        foreach($events as $event_id => $data) {
+            $response = $module->framework->saveData($pid, $record_id, $event_id, $data);
+        }
+    }
+
+    /* method 2: use the REDCap class directly
+     * use the altered $redcap_data array in a single function call
+     */
+    \REDCap::saveData($pid, 'array', $redcap_data, 'overwrite');
+
+    /* Log what was done
+```
+
+</details>
+<br />
+
+---

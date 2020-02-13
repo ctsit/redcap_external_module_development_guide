@@ -30,3 +30,13 @@ Read [the official documentation on creating plugin pages](https://github.com/va
 ## Accessing Variables
 
 Read [the official documentation on module functions](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/intro.md). Search for functions containing `User` and `ProjectSetting`.
+
+## Record Wrangling
+
+Read the source code of the following files (relative to the root of your `redcap_vx.y.z` folder), searching for phrases `getData`, `saveData`.
+- `ExternalModules/`
+    - `AbstractExternalModule.php`
+    - `ExternalModules.php`
+- `Classes/`
+    - `REDCap.php`
+    - `Records.php`
