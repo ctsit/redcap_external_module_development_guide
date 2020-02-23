@@ -3,7 +3,7 @@ layout: default
 title: REDCap External Module Development Guide
 ---
 
-# REDCap External Module  Development Guide
+# REDCap External Module Development Guide
 
 This site is a guide to the development of software extensions to Vanderbilt University's Research Electronic Data CAPture (REDCap) using REDCap's External Module framework. Added to REDCap in the Fall of 2017, the external module framework has proven to be an effective and popular way to change REDCap's behavior to meet the needs of specific sites and projects. This guide provides an introduction to external modules and guidance in creating a team and plan for developing modules for one's own needs and the broader REDCap community.
 
