@@ -312,7 +312,7 @@ This module uses AJAX. Your updates should be made in `pages/ajaxpage.php`. You 
 
 You may have noticed the `setData` function in the official module documentation. At first glance, this function may appear suitable for this exercise, but plugins do not provide the context it requires. It is more suited to _hooks_. While `setData` takes only 3 arguments (`$record`, `$fieldName`, and `$values`), it actually requires an `event_id` - a numerical identifier for the event - to be detected for it to function properly; this is fine for a hook that is intended to run on a record page. `setData`'s lack of logging is also an issue. Any write events to the REDCap database short of logging itself should be logged.
 
-Note: The official documentation is a bit unclear on the appropriateness of using the `REDCap` class methods. The [first paragraph of the official documentation](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#external-module-framework---official-documentation) mentions that all '[m]odules can utilize any of the "REDCap" class methods (e.g., `\REDCap::getData`)', but later, the same document recommends developers [do not](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#available-developer-methods-in-external-modules) reference other methods or files; this guide assumes this statement refers to only classes contained in the `ExternalModules` folder. The solutions provided below use both the built-in module method and the the REDCap class methods.
+The solutions provided below use both built-in module methods and the REDCap class implementations of `getData` and `saveData`.
 
 <details>
 <summary>Example Solution
