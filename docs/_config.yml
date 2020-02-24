@@ -2,10 +2,17 @@ title: REDCap External Module Development Guide
 description: REDCap External Module Development Guide
 repository: ctsit/redcap_external_module_development_guide
 
-markdown: kramdown
+repo_root: https://github.com/ctsit/redcap_external_module_development_guide/
+
+markdown: CommonMarkGhPages
 
 # ToDo: Review this theme content and remove stuff if it is not needed
 theme: jekyll-theme-minimal
 logo: /assets/img/logo.png
 show_downloads: true
+authors:
+  - <a href="https://github.com/pbchase">Philip Chase</a>
+  - <a href="https://vivo.ufl.edu/display/n32455">Taryn Stoffs</a>
+  - <a href="https://github.com/ChemiKyle">Kyle Chesney</a>
+  - <a href="https://vivo.ufl.edu/display/n64866">Christopher P Barnes</a>
 google_analytics:
