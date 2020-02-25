@@ -374,7 +374,7 @@ The solutions provided below use both built-in module methods and the REDCap cla
 
 ### [Intro to Queries]({{ site.repo_root }}exercises/intro_to_queries/)
 
-In this module, you will complete a plugin page that allows admins to assign and revoke privileges for users in bulk. Make your changes in `ExternalModule.php`; you will need to write a few lines of SQL to make an `UPDATE` statement.
+In this module, you will complete a plugin page that allows admins to assign and revoke privileges for users in bulk. Make your changes in `ExternalModule.php`; you will need to write a few lines of SQL to make an `UPDATE` statement. If you visit the plugin page before you complete the `gatherUsers` function, you will receive a fatal error in `ExternalModule.php`. This error is normal. Work the problem.
 
 You will occasionally have to write SQL queries; most often, this need will arise when writing a module that adds a feature for REDCap admins. Writing your own SQL should be a last resort after you have considered all of your builtin options.
 
