@@ -374,16 +374,16 @@ The solutions provided below use both built-in module methods and the REDCap cla
 
 ### [Intro to Queries]({{ site.repo_root }}exercises/intro_to_queries/)
 
-In this module, you will complete a plugin page that allows admins to assign and revoke privileges for users in bulk. Your changes should be made in `ExternalModule.php`, you will need to write a few lines of SQL to make an `UPDATE` statement.
+In this module, you will complete a plugin page that allows admins to assign and revoke privileges for users in bulk. Make your changes in `ExternalModule.php`; you will need to write a few lines of SQL to make an `UPDATE` statement.
 
-You will occasionally have to write your own SQL queries, most often this need will arise when writing a quality-of-life module for admins. Writing your own SQL should be a last resort after you have considered all of your builtin options.
+You will occasionally have to write SQL queries; most often, this need will arise when writing a module that adds a feature for REDCap admins. Writing your own SQL should be a last resort after you have considered all of your builtin options.
 
-While evaluating builtin options for this exercise, you might consider using `framework->getUser`, but you want _all_ users -- and you don't want to have admins have to remember usernames.
-When a module call doesn't work, you should look at its source code to see if it calls a core class. `framework->getUser` is a wrapper around `\REDCap::getUsers()`, but calling this is _also_ unsuitable since it is only allowed in a project context, but we are building a plugin page for the Control Center.
+While evaluating builtin options for this exercise, you might be tempted to use `framework->getUser`. It won't meet your needs, but it's worth exploring why. For this module, you need a class method that lists _all_ users, but `framework->getUser` does not do that.
+When a module call doesn't work, look at its source code to see if it calls a core class. `framework->getUser` is a wrapper around `\REDCap::getUsers()` which might seem useful, but calling this is _also_ unsuitable since it is only allowed in a project context. As we are writing a plugin page for the Control Center, `\REDCap::getUsers()` will fail. The project context requirement in `\REDCap::getUsers()` forces us to write a SQL query of REDCap's user information table.
 
-You will probably find your [docker environment's phpmyadmin container](http://localhost/phpmyadmin) useful for this exercise.
+You will probably find your [docker environment's PHPMyAdmin container](http://localhost/phpmyadmin/) useful for this exercise. Adjust that URL to match the port number of your docker environment's web server container if it fails.
 
-**NB**: Those of you familiar with SQL may wonder about the use of prepared statements. These are _not_ currently implemented but will be in the near future - in Framework Version 4 - read the [official documentation on queries](https://github.com/vanderbilt/redcap-external-modules/blob/release/docs/querying.md) for more information. An example of using prepared statements is provided in the solution below. 
+**NB**: Those of you familiar with SQL may wonder about the use of prepared statements. These are _not_ currently implemented but will be soon - in Framework Version 4 - read the [official documentation on queries](https://github.com/vanderbilt/redcap-external-modules/blob/release/docs/querying.md) for more information. An example of using prepared statements is provided in the solution below.
 
 <details>
 <summary>Example Solution
