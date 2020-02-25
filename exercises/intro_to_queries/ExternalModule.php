@@ -17,9 +17,6 @@ class ExternalModule extends AbstractExternalModule {
             'ajaxpage' => $this->framework->getUrl('pages/ajaxpage.php')
         ];
         $this->setJsSettings($settings);
-
-        //$result = $this->alterUser(['bob', 'carol', 'dan'], 1);
-        //SQL injection
     }
 
     protected function includeJs($path) {
