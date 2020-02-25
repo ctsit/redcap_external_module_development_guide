@@ -371,3 +371,68 @@ The solutions provided below use both built-in module methods and the REDCap cla
 <br />
 
 ---
+
+### [Intro to Queries]({{ site.repo_root }}exercises/intro_to_queries/)
+
+In this module, you will complete a plugin page that allows admins to assign and revoke privileges for users in bulk. Your changes should be made in `ExternalModule.php`, you will need to write a few lines of SQL to make an `UPDATE` statement.
+
+You will occasionally have to write your own SQL queries, most often this need will arise when writing a quality-of-life module for admins. Writing your own SQL should be a last resort after you have considered all of your builtin options.
+
+While evaluating builtin options for this exercise, you might consider using `framework->getUser`, but you want _all_ users -- and you don't want to have admins have to remember usernames.
+When a module call doesn't work, you should look at its source code to see if it calls a core class. `framework->getUser` is a wrapper around `\REDCap::getUsers()`, but calling this is _also_ unsuitable since it is only allowed in a project context, but we are building a plugin page for the Control Center.
+
+You will probably find your [docker environment's phpmyadmin container](http://localhost/phpmyadmin) useful for this exercise.
+
+**NB**: Those of you familiar with SQL may wonder about the use of prepared statements. These are _not_ currently implemented but will be in the near future - in Framework Version 4 - read the [official documentation on queries](https://github.com/vanderbilt/redcap-external-modules/blob/release/docs/querying.md) for more information. An example of using prepared statements is provided in the solution below. 
+
+<details>
+<summary>Example Solution
+</summary>
+
+`ExternalModule.php`
+```php
+    function gatherUsers() {
+        // FIXME: use $sql with an appropriate function to get a list of every user
+
+        $sql = 'SELECT username
+            FROM redcap_user_information';
+
+        $result = $this->framework->query($sql);
+
+        /* stop writing here */
+        // parse the mysqli response object into an array
+        $username_array = array_column(
+                $result->fetch_all(MYSQLI_ASSOC),
+                'username'
+                );
+        return $username_array;
+    }
+
+    function alterUsers($users, $new_value) {
+        $users = implode('", "', $users);
+        // FIXME: write and run the SQL command, log what was done
+
+        $sql = 'UPDATE redcap_user_information
+            SET allow_create_db = ' . $new_value . '
+            WHERE username IN ("' . $users . '")';
+
+        $result = $this->framework->query($sql);
+
+         /* Example of a prepared statement in Framework v4
+         $sql = 'UPDATE redcap_user_information
+            SET allow_create_db = ?
+            WHERE username IN (?)';
+          */
+        //$result = $this->framework->query($sql, [$new_value, $users]);
+
+        if ($result) {
+            // Log what was done if successfull
+            $this->framework->log("Set allow_db to $new_value for users: \"$users\"");
+        }
+
+        return $result;
+    }
+```
+
+</details>
+<br />

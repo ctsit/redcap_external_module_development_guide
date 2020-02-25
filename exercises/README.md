@@ -40,3 +40,7 @@ Read the source code of the following files (relative to the root of your `redca
 - `Classes/`
     - `REDCap.php`
     - `Records.php`
+
+## Intro to Queries
+
+Read [the official documentation on module functions](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/framework/intro.md). Search for the `query` function.
