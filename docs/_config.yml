@@ -2,7 +2,7 @@ title: REDCap External Module Development Guide
 description: REDCap External Module Development Guide
 repository: ctsit/redcap_external_module_development_guide
 
-repo_root: https://github.com/ctsit/redcap_external_module_development_guide/
+repo_root: https://github.com/ctsit/redcap_external_module_development_guide/tree/master/
 
 markdown: CommonMarkGhPages
 

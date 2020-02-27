@@ -371,3 +371,68 @@ The solutions provided below use both built-in module methods and the REDCap cla
 <br />
 
 ---
+
+### [Intro to Queries]({{ site.repo_root }}exercises/intro_to_queries/)
+
+In this module, you will complete a plugin page that allows admins to assign and revoke privileges for users in bulk. Make your changes in `ExternalModule.php`; you will need to write a few lines of SQL to make an `UPDATE` statement. If you visit the plugin page before you complete the `gatherUsers` function, you will receive a fatal error in `ExternalModule.php`. This error is normal. Work the problem.
+
+You will occasionally have to write SQL queries; most often, this need will arise when writing a module that adds a feature for REDCap admins. Writing your own SQL should be a last resort after you have considered all of your builtin options.
+
+While evaluating builtin options for this exercise, you might be tempted to use `framework->getUser`. It won't meet your needs, but it's worth exploring why. For this module, you need a class method that lists _all_ users, but `framework->getUser` does not do that.
+When a module call doesn't work, look at its source code to see if it calls a core class. `framework->getUser` is a wrapper around `\REDCap::getUsers()` which might seem useful, but calling this is _also_ unsuitable since it is only allowed in a project context. As we are writing a plugin page for the Control Center, `\REDCap::getUsers()` will fail. The project context requirement in `\REDCap::getUsers()` forces us to write a SQL query of REDCap's user information table.
+
+You will probably find your [docker environment's PHPMyAdmin container](http://localhost/phpmyadmin/) useful for this exercise. Adjust that URL to match the port number of your docker environment's web server container if it fails.
+
+**NB**: Those of you familiar with SQL may wonder about the use of prepared statements. These are _not_ currently implemented but will be soon - in Framework Version 4 - read the [official documentation on queries](https://github.com/vanderbilt/redcap-external-modules/blob/release/docs/querying.md) for more information. An example of using prepared statements is provided in the solution below.
+
+<details>
+<summary>Example Solution
+</summary>
+
+`ExternalModule.php`
+```php
+    function gatherUsers() {
+        // FIXME: use $sql with an appropriate function to get a list of every user
+
+        $sql = 'SELECT username
+            FROM redcap_user_information';
+
+        $result = $this->framework->query($sql);
+
+        /* stop writing here */
+        // parse the mysqli response object into an array
+        $username_array = array_column(
+                $result->fetch_all(MYSQLI_ASSOC),
+                'username'
+                );
+        return $username_array;
+    }
+
+    function alterUsers($users, $new_value) {
+        $users = implode('", "', $users);
+        // FIXME: write and run the SQL command, log what was done
+
+        $sql = 'UPDATE redcap_user_information
+            SET allow_create_db = ' . $new_value . '
+            WHERE username IN ("' . $users . '")';
+
+        $result = $this->framework->query($sql);
+
+         /* Example of a prepared statement in Framework v4
+         $sql = 'UPDATE redcap_user_information
+            SET allow_create_db = ?
+            WHERE username IN (?)';
+          */
+        //$result = $this->framework->query($sql, [$new_value, $users]);
+
+        if ($result) {
+            // Log what was done if successfull
+            $this->framework->log("Set allow_db to $new_value for users: \"$users\"");
+        }
+
+        return $result;
+    }
+```
+
+</details>
+<br />
