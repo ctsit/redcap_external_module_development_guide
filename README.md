@@ -15,7 +15,7 @@ Managing a Jekyll web site requires skills common amongst software developers. I
 
 ## Sharing
 
-All of the content for this web site is available under the Apache 2.0. See [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0) for more details.
+All of the content for this web site is available under the Apache 2.0 License. See [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0) for more details.
 
 
 ## Site Development
