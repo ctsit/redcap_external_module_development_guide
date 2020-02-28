@@ -90,6 +90,21 @@ docker-compose up -d
 
 If it fails again, you'll need to dig deeper to find out why. It's probably just a small thing, but knowing which small thing is hard to anticipate. Sorry about that.
 
+## Play time
+
+Now that you have a REDCap system of your own, play with it. Know that you can only hurt yourself at this point. In the worst case scenario, you can rebuild from scratch. Yet know that no one is protecting your work on this personal REDCap except you. Don't do any work you aren't willing to lose.
+
+Here are some things you might try:
+
+- Access the Control Center > Browse Users. Look at the accounts that the installer made for you.
+- Access the Control Center > General Configuration.
+- Access the Control Center > User Settings.
+- Access the Control Center > File Upload Settings.
+- Access the Control Center \> External Modules \> View modules available.... Download a few modules. Try _Admin Dashboard_, _MySQL Simple Admin_, _Image Map_, and _Date Calculated Fields_. They are popular and easy to implement.
+- Access the Control Center > Modules/Services Configuration. These "Modules" are not _External Modules_. They are big features in REDCap that are turned off by default.
+- Access the Control Center > Field Validation Types. Do you know these are just rows in a MySQL table. Did you know you can add you own?
+- Access the Control Center > Project Templates. You can add your own.
+
 
 ## Getting the development exercises
 
