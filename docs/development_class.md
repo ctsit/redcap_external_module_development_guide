@@ -5,28 +5,27 @@ These instructions were drafted for the UAMS REDCap Development Class.
 ## Required Resources
 - Laptop
 - Admin rights to that laptop
-- Slack client
+- Slack client - or just use the web client. That's at [https://slack.com/](https://slack.com/).
 - Github account - [https://github.com/](https://github.com/)
 - Github Desktop - [https://desktop.github.com/](https://desktop.github.com/)
-- Docker and Docker Compose
-    - Mac and Windows users get Docker Desktop - [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
+- Docker Desktop - [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 - A little experience with docker and docker-compose
-- Redcap-docker-compose - A docker environment tailored for running and developing for REDCap. See [https://github.com/123andy/redcap-docker-compose](https://github.com/123andy/redcap-docker-compose)
-- redcap9.3.5.zip - Ask your local REDCap Admin for `redcap9.3.5.zip` downloaded from the REDCap Community. If you _are_ that REDCap Admin with access to the community, the download link is [https://community.projectredcap.org/page/download.html](https://community.projectredcap.org/page/download.html).
+- redcap-docker-compose - A docker environment tailored for running and developing for REDCap. See [https://github.com/123andy/redcap-docker-compose](https://github.com/123andy/redcap-docker-compose)
+- redcap9.3.5.zip - Ask your local REDCap Admin for `redcap9.3.5.zip` downloaded from the REDCap Community. If you _are_ that REDCap Admin with access to the community, the download link is [https://community.projectredcap.org/page/download.html](https://community.projectredcap.org/page/download.html). Please be generous with access to the resources your employees and customers need to learn and develop for REDCap while reminding them of the need to not redistribute REDCap software outside the entity that has licensed it.
 - Text editor or PHP IDE - VS Code, PHPStorm, or Atom are good.
-- Firefox or Chrome - we will be using the developer tools
+- Firefox or Chrome - we will be using the developer tools.
 
 
 ## Pre-req Setup Tasks
 
-- Accept slack invite in your email inbox
-- Set Slack password for our workspace
-- Keep [https://uf-and-uams.slack.com](https://uf-and-uams.slack.com) open
+- Accept Slack invite in your email inbox.
+- Set Slack password for our workspace.
+- Keep [https://uf-and-uams.slack.com](https://uf-and-uams.slack.com) open.
 - (Philip will send this list of instructions via our Slack workspace so you can click on the links. No transcription required.)
 - Install [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download) (Because friends don't let friends use Notepad.)
 - Create a Github account - [https://github.com/](https://github.com/)
 - Install Github Desktop - [https://desktop.github.com/](https://desktop.github.com/)
-- Feed GitHub credentials into Github Desktop
+- Feed GitHub credentials into Github Desktop.
 - Install Docker Desktop from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 
 
@@ -56,8 +55,41 @@ MAILHOG_PORT=4935
 ![REDCap Docker-Compose Installer](/assets/img/installer.png)
 
 - Select 'Use a local copy of the full zip installer...'. Click Browse, locate redcap9.3.5.zip and upload it. 
-- Select 'Prepopulate with table-based users and activate table authentication' and provide your email address.
+- Select 'Prepopulate with table-based users and activate table authentication' and provide _your_ email address.
 - Click 'INSTALL REDCAP'
+- Wait a couple minutes.
+- When you see the many green dialog boxes, the installation is complete.
+
+![Successful installation](/assets/img/successful_installation.png)
+
+- Ignore the instructions to access the REDCap installer and access your fully functional local REDCap at [http://localhost:1935](http://localhost:1935)
+- Login as admin. Your password is 'password'. Every user's account is 'password'.
+
+
+## It didn't work!
+
+Sometimes things are weird and you'll have to rebuild from scratch. To do that, you'll need to open a terminal to the `redcap-docker-compose` folder and issue these commands:
+
+```
+# 'cause it might have stuff you want to preserve
+cp -r www/modules .
+
+# The installer will get confused if any part of your old installation exists
+rm -rf www
+rm -rf logs
+
+# You have to be in the right folder for docker-compose to find its config files
+cd rdc
+
+# Destroy the containers and their volumes
+docker-compose down -v
+
+# Rebuild the containers and volumes from scratch
+docker-compose up -d
+```
+
+If it fails again, you'll need to dig deeper to find out why. It's probably just a small thing, but knowing which small thing is hard to anticipate. Sorry about that.
+
 
 ## Getting the development exercises
 
