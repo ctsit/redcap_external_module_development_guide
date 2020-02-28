@@ -31,6 +31,11 @@ Vanderbilt publishes modules submitted by the REDCap Community in the [REDCap Re
 Beyond those in the REDCap Repo, [GitHub](https://github.com) is commonly used by developers in the REDCap community to host and share modules. Many module developers tag their modules with the topic 'redcap-external-module'. This shared topic allows you to find them with a [GitHub topic search](https://github.com/search?q=topic%3Aredcap-external-module&type=Repositories)
 
 
+### Software Setup and Class Notes
+
+For people new development or if you are teaching a development class. You will likely find the [REDCap Development Class](development_class/) useful. These instructions install everything required to build a local REDCap development environment using Docker and GitHub tools. As always, you'll need to get a redcap.zip file from your local REDCap Admins, but everything else is freely downloadable from the poublic internet.
+
+
 ## Setting Up Your Environment
 Read the section of the official documentation on [naming a module](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md#naming-a-module). You should copy the contents of this directory to the `modules` directory of your REDCap instance. Assuming you are using Andy Martin's [redcap-docker-compose environment](https://github.com/123andy/redcap-docker-compose), the modules directory is located at `www/modules/`.  
 Please note that - except for **Hello World** - you will need to mark the [semantic version](https://semver.org/) of each module - in short, you will need to append `_v0.0.0` to each directory - for the EM Framework to recognize it is a module. These are intentionally left off to simulate having just `git clone`d a module from a public repository. Public repositories should _not_ have semantic versions in their titles. REDCap uses the directory name to determine module versions. As such, each version will have a separate directory. Use `git tag`s to apply version numbers to the appropriate commit.
