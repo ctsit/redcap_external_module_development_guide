@@ -33,7 +33,7 @@ Beyond those in the REDCap Repo, [GitHub](https://github.com) is commonly used b
 
 ### Software Setup and Class Notes
 
-For people new development or if you are teaching a development class. You will likely find the [REDCap Development Class](development_class/) useful. These instructions install everything required to build a local REDCap development environment using Docker and GitHub tools. As always, you'll need to get a redcap.zip file from your local REDCap Admins, but everything else is freely downloadable from the poublic internet.
+People new to development or those teaching a development class will likely find the [REDCap Development Class](development_class/) useful. These instructions install everything required to build a local REDCap development environment using Docker and GitHub tools. As always, you'll need to get a redcap.zip file from your local REDCap Admins, but everything else is freely downloadable from the public internet.
 
 
 ## Setting Up Your Environment
