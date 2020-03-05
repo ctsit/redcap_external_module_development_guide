@@ -8,8 +8,8 @@ These notes are the first step towards a revision to the external module develop
 - Laptop
 - Admin rights to that laptop
 - Slack client - or just use the web client. That's at [https://slack.com/](https://slack.com/).
-- Github account - [https://github.com/](https://github.com/)
-- Github Desktop - [https://desktop.github.com/](https://desktop.github.com/)
+- GitHub account - [https://github.com/](https://github.com/)
+- GitHub Desktop - [https://desktop.github.com/](https://desktop.github.com/)
 - Docker Desktop - [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 - A little experience with docker and docker-compose
 - redcap-docker-compose - A docker environment tailored for running and developing for REDCap. See [https://github.com/123andy/redcap-docker-compose](https://github.com/123andy/redcap-docker-compose)
@@ -25,9 +25,9 @@ These notes are the first step towards a revision to the external module develop
 - Keep [https://uf-and-uams.slack.com](https://uf-and-uams.slack.com) open.
 - (Philip will send this list of instructions via our Slack workspace so you can click on the links. No transcription required.)
 - Install [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download) (Because friends don't let friends use Notepad.)
-- Create a Github account - [https://github.com/](https://github.com/)
-- Install Github Desktop - [https://desktop.github.com/](https://desktop.github.com/)
-- Feed GitHub credentials into Github Desktop.
+- Create a GitHub account - [https://github.com/](https://github.com/)
+- Install GitHub Desktop - [https://desktop.github.com/](https://desktop.github.com/)
+- Feed GitHub credentials into GitHub Desktop.
 - Install Docker Desktop from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 
 
@@ -47,7 +47,7 @@ PHPMYADMIN_PORT=3935
 MAILHOG_PORT=4935
 ```
 
-- In Github Desktop open a terminal cd'd to the `redcap-docker-compose` folder with the keystroke \<ctrl\>```
+- In GitHub Desktop open a terminal cd'd to the `redcap-docker-compose` folder with the keystroke \<ctrl\>```
 - Change directories into the `rdc` folder with the command `cd rdc`
 - In the terminal start the containers with this command `docker-compose up -d`
 - Wait for the containers to build. This step takes a few minutes the first time.
@@ -110,8 +110,8 @@ Here are some things you might try:
 
 ## Getting the development exercises
 
-- Use Github Desktop to clone `ctsit/redcap_external_module_development_guide` (Go to File > Clone Repository, then paste `ctsit/redcap_external_module_development_guide` in the "github.com" tab).
-- Use Github Desktop to open this new repo (REMDG) in Finder/Explorer. Copy everything in the `exercises/` folder to folder `redcap-docker-compose/www/modules/`. Don't copy the `exercises` folder; copy its _contents_.  These files should be inside the `redcap-docker-compose/www/modules/` folder 
+- Use GitHub Desktop to clone `ctsit/redcap_external_module_development_guide` (Go to File > Clone Repository, then paste `ctsit/redcap_external_module_development_guide` in the "github.com" tab).
+- Use GitHub Desktop to open this new repo (REMDG) in Finder/Explorer. Copy everything in the `exercises/` folder to folder `redcap-docker-compose/www/modules/`. Don't copy the `exercises` folder; copy its _contents_.  These files should be inside the `redcap-docker-compose/www/modules/` folder
 
 ```
 accessing_variables
