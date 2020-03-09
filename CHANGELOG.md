@@ -2,6 +2,10 @@
 All notable changes to the REDCap External Module Development Guide project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.1] - 2020-03-09
+### Changed
+- Remove trailing slash from development_class link to accommodate GitHub Pages (Philip Chase)
+
 
 ## [1.2.0] - 2020-03-09
 ### Added
