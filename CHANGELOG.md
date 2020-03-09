@@ -3,6 +3,11 @@ All notable changes to the REDCap External Module Development Guide project will
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.2.0] - 2020-03-09
+### Added
+- Add development_class inspired by February 2020 UAMS class (Philip Chase)
+
+
 ## [1.1.0] - 2020-02-27
 ### Added
 - Add exercise which uses the framework->query for arbitrary SQL execution (Kyle Chesney)
