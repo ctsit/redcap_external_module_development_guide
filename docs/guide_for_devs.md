@@ -33,7 +33,7 @@ Beyond those in the REDCap Repo, [GitHub](https://github.com) is commonly used b
 
 ### Software Setup and Class Notes
 
-People new to development or those teaching a development class will likely find the [REDCap Development Class](development_class) useful. These instructions install everything required to build a local REDCap development environment using Docker and GitHub tools. As always, you'll need to get a redcap.zip file from your local REDCap Admins, but everything else is freely downloadable from the public internet.
+People new to development or those teaching a development class will likely find the [EMD-101: Building a REDCap Environment](emd101) useful. These instructions install everything required to build a local REDCap development environment using Docker and GitHub tools. As always, you'll need to get a redcap.zip file from your local REDCap Admins, but everything else is freely downloadable from the public internet.
 
 
 ## Setting Up Your Environment
@@ -44,6 +44,22 @@ Please note that - except for **Hello World** - you will need to mark the [seman
 ## External Module Development Exercises
 
 The External Module Development Guide includes a set of [development exercises](https://github.com/ctsit/redcap_external_module_development_guide/exercises/) to use as a guide for module development. Each activity teaches a different facet of module development. Most of the modules are intentionally incomplete. They generally have comments denoting regions where you will need to add code to implement a missing feature.
+
+### Getting the development exercises
+
+- Use GitHub Desktop to clone `ctsit/redcap_external_module_development_guide` (Go to File > Clone Repository, then paste `ctsit/redcap_external_module_development_guide` in the "github.com" tab).
+- Use GitHub Desktop to open this new repo (REMDG) in Finder/Explorer. Copy everything in the `exercises/` folder to folder `redcap-docker-compose/www/modules/`. Don't copy the `exercises` folder; copy its _contents_.  These files should be inside the `redcap-docker-compose/www/modules/` folder
+
+```
+accessing_variables
+hello_world_v0.0.0
+intro_to_hooks
+intro_to_js
+intro_to_plugins
+intro_to_queries
+README.md
+record_wrangling
+```
 
 ---
 
