@@ -20,6 +20,8 @@ The University of Colorado Denver has created a series of videos that address mo
 
 You will likely find it helpful to keep Vanderbilt's [official External Module documentation](https://github.com/vanderbilt/redcap-external-modules/blob/testing/docs/official-documentation.md) available while completing these exercises; this document will link relevant sections for review.
 
+**Note:** this document repeatedly references the GitHub repository for External Modules; unfortunately, that repository has been made private and its links will no longer work. Luckily, the documentation exists in your local REDCap instance at **Control Center > Plugin, Hook, & External Module Documentation > External Module Documentation**.
+
 
 ### REDCap Repo
 
