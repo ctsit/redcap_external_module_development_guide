@@ -12,9 +12,10 @@ p.authors {
   font-weight:bold;
 }
 
-img.screenshot {
+img[src*="#screenshot"] {
   padding-left: 35px;
-  padding-right: 35px;
+  padding-right: 25px;
   padding-top: 12px;
   padding-bottom: 12px;
+  max-width: 90%;
 }
