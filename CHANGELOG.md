@@ -3,6 +3,12 @@ All notable changes to the REDCap External Module Development Guide project will
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.1] - 2020-09-22
+### Changed
+- Switch emd101 screenshots to markdown (Philip Chase, Kyle Chesney)
+- Switch emd102 screenshots to markdown and resize menu screenshots (Philip Chase, Kyle Chesney)
+
+
 ## [1.3.0] - 2020-09-22
 ### Added
 - Add release number to left-hand navigation (Philip Chase)
