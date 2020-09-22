@@ -33,7 +33,7 @@ Vanderbilt publishes modules submitted by the REDCap Community in the [REDCap Re
 Beyond those in the REDCap Repo, [GitHub](https://github.com) is commonly used by developers in the REDCap community to host and share modules. Many module developers tag their modules with the topic 'redcap-external-module'. This shared topic allows you to find them with a [GitHub topic search](https://github.com/search?q=topic%3Aredcap-external-module&type=Repositories)
 
 
-### Software Setup and Class Notes
+### Software Setup
 
 People new to development or those teaching a development class will likely find the [EMD-101: Building a REDCap Environment](emd101) useful. These instructions install everything required to build a local REDCap development environment using Docker and GitHub tools. As always, you'll need to get a redcap.zip file from your local REDCap Admins, but everything else is freely downloadable from the public internet.
 
