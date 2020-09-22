@@ -1,6 +1,7 @@
 title: REDCap External Module Development Guide
 description: REDCap External Module Development Guide
 repository: ctsit/redcap_external_module_development_guide
+release: 1.3.0
 
 repo_root: https://github.com/ctsit/redcap_external_module_development_guide/tree/master/
 
