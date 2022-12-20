@@ -3,6 +3,15 @@ All notable changes to the REDCap External Module Development Guide project will
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.2] - 2022-12-20
+### Changed
+- Switch license to CC BY-NC 4.0 (Philip Chase)
+- Link to Philip Chases' ORCID (Philip Chase)
+
+### Added
+- Add UF CTSI's NIH award in Acknowledgments (Philip Chase)
+
+
 ## [1.3.1] - 2020-09-22
 ### Changed
 - Switch emd101 screenshots to markdown (Philip Chase, Kyle Chesney)
