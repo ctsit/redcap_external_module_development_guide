@@ -25,7 +25,7 @@ You will likely find it helpful to keep Vanderbilt's [official External Module d
 
 ### REDCap Repo
 
-Vanderbilt publishes modules submitted by the REDCap Community in the [REDCap Repo](https://redcap.vanderbilt.edu/consortium/modules/index.php). The source code for each module is accessible in GitHub and linked from the entries in the REDCap Repo. These modules provide fully functional code examples. As each module in the REDCap Repo must have an open-source license, you are free to use their code in other modules.
+Vanderbilt publishes modules submitted by the REDCap Community in the [REDCap Repo](https://redcap.vumc.org/consortium/modules/index.php). The source code for each module is accessible in GitHub and linked from the entries in the REDCap Repo. These modules provide fully functional code examples. As each module in the REDCap Repo must have an open-source license, you are free to use their code in other modules.
 
 
 ### GitHub
